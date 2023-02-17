@@ -29,7 +29,7 @@ describe("VitePluginTSGQL", () => {
     if (plugin.configResolved instanceof Function) {
       await plugin.configResolved({} as any);
       expect(watchSpy).toHaveBeenCalledWith(
-        expect.stringMatching(/src\/vite-plugin-ts-gql/)
+        expect.stringMatching(/\/vite-plugin-ts-gql$/)
       );
       return;
     }

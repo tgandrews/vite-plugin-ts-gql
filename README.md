@@ -4,8 +4,6 @@ A [Vite](https://vitejs.dev/) plugin for running [ts-gql](https://github.com/Thi
 
 This will automatically start the `@ts-gql/compiler` watch command so you don't have to and can just start vite.
 
-[![Coverage Status](https://coveralls.io/repos/github/tgandrews/vite-plugin-ts-gql/badge.svg?branch=main)](https://coveralls.io/github/tgandrews/vite-plugin-ts-gql?branch=main)
-
 ## Usage
 
 1. Install and set up vite and ts-gql

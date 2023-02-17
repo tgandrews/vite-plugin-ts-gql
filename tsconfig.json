@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "noEmitOnError": false,
+    "declaration": true
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}

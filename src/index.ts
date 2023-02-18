@@ -3,7 +3,7 @@ import type { Plugin } from "vite";
 
 import { watch } from "@ts-gql/compiler";
 
-export default function vitePluginTsGql(): Plugin {
+export function vitePluginTsGql(): Plugin {
   return {
     name: "ts-gql",
     configResolved() {

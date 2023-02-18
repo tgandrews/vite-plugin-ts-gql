@@ -1,8 +1,8 @@
 import * as tsGql from "@ts-gql/compiler";
 
-import VitePluginTSGQL from "./";
+import { vitePluginTsGql } from "./";
 
-describe("VitePluginTSGQL", () => {
+describe("vitePluginTsGql", () => {
   let originalEnv: string | undefined;
   beforeAll(() => {
     originalEnv = process.env.NODE_ENV;
@@ -13,7 +13,7 @@ describe("VitePluginTSGQL", () => {
   });
 
   it("should set up the basics of a plugin", async () => {
-    const plugin = VitePluginTSGQL();
+    const plugin = vitePluginTsGql();
     expect(plugin.configResolved).toBeInstanceOf(Function);
     expect(plugin.name).toEqual("ts-gql");
   });
@@ -25,7 +25,7 @@ describe("VitePluginTSGQL", () => {
       // @ts-ignore
       .mockResolvedValue();
 
-    const plugin = VitePluginTSGQL();
+    const plugin = vitePluginTsGql();
     if (plugin.configResolved instanceof Function) {
       await plugin.configResolved({} as any);
       expect(watchSpy).toHaveBeenCalledWith(
@@ -43,7 +43,7 @@ describe("VitePluginTSGQL", () => {
       // @ts-ignore
       .mockResolvedValue();
 
-    const plugin = VitePluginTSGQL();
+    const plugin = vitePluginTsGql();
     if (plugin.configResolved instanceof Function) {
       await plugin.configResolved({} as any);
       expect(watchSpy).not.toHaveBeenCalled();
@@ -64,7 +64,7 @@ describe("VitePluginTSGQL", () => {
       .spyOn(console, "error")
       .mockImplementation(() => {});
 
-    const plugin = VitePluginTSGQL();
+    const plugin = vitePluginTsGql();
     if (plugin.configResolved instanceof Function) {
       await plugin.configResolved({} as any);
       expect(watchSpy).toHaveBeenCalled();
